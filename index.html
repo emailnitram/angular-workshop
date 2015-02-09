@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="cutePetsApp">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="js/vendor/angular.js"></script>
+	<script src="js/vendor/angular-ui-router.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/routes.js"></script>
+	<script src="js/directives/tooltip.js"></script>
+	<script src="js/directives/drag-box.js"></script>
+	<script src="js/directives/angular-logo.js"></script>
+	<script src="js/directives/click-me.js"></script>
+	<script src="js/directives/child.js"></script>
+	<script src="js/services/animal.js"></script>
+	<script src="js/controllers/home.js"></script>
+	<script src="js/controllers/cats.js"></script>
+	<script src="js/controllers/dogs.js"></script>
+	<title>Cute Pets</title>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+		Today is {{day() | date: 'EEEE'}}
+			<ul class="nav nav-pills pull-right">
+	          <li ng-class="{active: menuName === 'home'}"><a ui-sref="home">Home</a></li>
+	          <li ng-class="{active: menuName === 'cats'}"><a ui-sref="cats">Cats</a></li>
+	          <li ng-class="{active: menuName === 'dogs'}"><a ui-sref="dogs">Dogs</a></li>
+	        </ul>
+		</div>
+		<div ui-view class="jumbotron"></div>
+	</div>
+
+
+	<my-draggable>Hi Everyone!</my-draggable>
+	
+
+	<div angular-logo></div>
+	<div class="angular-logo"></div>
+	<angular-logo></angular-logo>
+	<!-- directive: angular-logo -->
+
+</body>
+</html>

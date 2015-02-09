@@ -1,0 +1,15 @@
+<h1>Cats</h1>
+<a click-me="sayHi();">Click Here!</a>
+<a ng-click="sayHi();">Click Here Again!</a>
+
+
+<div class="row">
+	<div class="col-6 col-sm-6 col-lg-3 animal" ng-repeat="cat in cats">
+	  <h2>{{cat.data.author}}</h2>
+	  <img ng-src="{{cat.data.thumbnail}}" class="img-circle">
+	  <p>{{cat.data.title}}</p>
+	  <p><a class="btn btn-default" ng-href="{{cat.data.url}}" role="button">View full size »</a></p>
+	  <tooltip></tooltip>
+	</div>
+</div>
+
